@@ -1,0 +1,187 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Bai Jamjuree', sans-serif;
+    font-size: 18px;
+    font-weight: 400;
+    
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+    gap:1rem;
+}
+head{
+    display: none;
+}
+
+:root{
+    --strong-cyan:hsl(171, 66%, 44%);
+    --light-blue:hsl(233, 100%, 69%);
+    --dark-grayish-blue:hsl(210, 10%, 33%);
+    --grayish-blue:hsl(201, 11%, 66%);
+}
+
+body{
+    background-image: url(images/bg-header-mobile.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    gap:0;
+    text-align: center;
+}
+
+header{
+    margin:6rem auto 4rem;
+}
+
+
+main{
+     gap:6rem;
+}
+
+section{
+    width:85%;
+    gap: 4rem;
+}
+
+
+
+img{
+    max-width: 100%;
+}
+
+h1,h2,h3{
+    color: var(--dark-grayish-blue);
+    font-weight: 600;
+}
+h1{
+    font-size: 31.1px;
+}
+h2{
+    font-size: 25.92px;
+}
+
+h3{
+    font-size: 21.6px;
+}
+
+p{
+    color: var(--grayish-blue);
+}
+
+.buttons{
+    width: 100%;
+    gap:1.5rem;
+}
+
+button{
+    width:100%;
+    border-radius: 20px;
+    border:2px 2px 5px 2px solid;
+    color: white;
+    padding: 3% 0;
+}
+
+.ios{
+    background-color: var(--strong-cyan);
+    border-color: var(--strong-cyan);
+    box-shadow: 0 0.25em 1em hsl(171, 66%, 80%);
+}
+
+.mac{
+    background-color: var(--light-blue);
+    border-color: var(--light-blue);
+    box-shadow: 0 0.25em 1em hsl(233, 100%, 89%);;
+}
+
+button:hover,button:active{
+    opacity: 0.7;
+}
+
+.benefits,.benefits-description,.features,.participants{
+    gap:3rem;
+}
+
+.navbar-bottom{
+background-color: hsl(201, 11%, 95%);
+width: 100%;
+padding: 20% 4%;
+gap:3rem;
+}
+
+.nav a{
+    text-decoration: none;
+    color: var(--dark-grayish-blue);
+    gap:1.5rem;
+}
+
+.social-media-icons{
+    flex-flow: row nowrap;
+    gap: 2rem;
+}
+
+footer{
+    background-color: hsl(201, 11%, 95%);
+    width: 100%;
+    gap:0.5rem;
+}
+
+
+@media screen and (min-width:800px) {
+    body{
+        background-image: url(images/bg-header-desktop.png);
+        background-repeat: no-repeat;
+        background-size: contain;
+    }
+    main{
+        gap:10rem;
+    }
+
+    section{
+        gap:6rem;
+    }
+
+    section > div:first-of-type, .buttons{
+        width: 50%;
+    }
+
+    .benefits-description,.features,.participants{
+    gap:5rem;
+}
+
+    .buttons,.participants,.navbar-bottom,.features,.benefits,.attribution{
+        flex-flow: row nowrap;
+        justify-content: space-evenly;
+    }
+    .buttons{
+        gap:3rem;
+    }
+    button{
+        border-radius: 50px;
+    }
+
+    .benefits{
+        gap:0;
+    }
+
+    .benefits-description div{
+        text-align: left;
+        align-items: flex-start;
+        justify-content: flex-start;
+    }
+
+    .benefits img{
+        transform: translate(-8rem,0);
+    }
+
+    .navbar-bottom{
+        padding: 5%;
+    }
+
+    .nav{
+        display: grid;
+        grid-template-columns: repeat(3,1fr);
+        place-items: start;
+    }
+}
